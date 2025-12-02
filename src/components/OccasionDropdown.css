@@ -1,0 +1,137 @@
+.occasion-dropdown {
+  position: relative;
+  width: 400px;
+}
+
+.dropdown-button {
+  width: 100%;
+  height: 80px;
+  background-color: #EDEFEE;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+
+.dropdown-button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.dropdown-button.selected {
+  background-color: #495E57;
+  color: #fff;
+}
+
+.dropdown-button.open {
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-icon {
+  font-size: 28px;
+  margin-right: 12px;
+}
+
+.dropdown-button.selected .dropdown-icon {
+  display: none;
+}
+
+.dropdown-text {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.dropdown-arrow {
+  font-size: 14px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background-color: #EDEFEE;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px dashed #ccc;
+  padding: 0 24px;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover {
+  background-color: #495E57;
+  color: #fff;
+}
+
+.dropdown-item:active {
+  transform: scale(0.98);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .occasion-dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-button {
+    height: 70px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+  
+  .dropdown-icon {
+    font-size: 24px;
+  }
+  
+  .dropdown-item {
+    height: 55px;
+    font-size: 15px;
+  }
+}

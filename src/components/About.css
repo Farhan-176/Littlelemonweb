@@ -1,0 +1,141 @@
+.about {
+  background-color: #fff;
+  padding: 4rem 0;
+  border-bottom: 2px solid #333;
+}
+
+.about-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-content h2 {
+  font-family: 'Markazi Text', serif;
+  font-size: 64px;
+  font-weight: 500;
+  margin: 0;
+  color: #495E57;
+}
+
+.about-content h3 {
+  font-family: 'Markazi Text', serif;
+  font-size: 40px;
+  margin: 0.5rem 0 2rem 0;
+  color: #495E57;
+  font-weight: 400;
+}
+
+.text-placeholder {
+  padding: 0;
+  background-color: transparent;
+}
+
+.text-placeholder p {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #495E57;
+  margin: 0 0 1rem 0;
+}
+
+.text-placeholder p:last-child {
+  margin-bottom: 0;
+}
+
+.about-images {
+  position: relative;
+  height: 400px;
+}
+
+.about-image-large {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-image-small {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .about {
+    padding: 3rem 0;
+  }
+  
+  .about-container {
+    gap: 2rem;
+  }
+  
+  .about-content h2 {
+    font-size: 52px;
+  }
+  
+  .about-content h3 {
+    font-size: 36px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 2rem 0;
+  }
+  
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .about-content h2 {
+    font-size: 48px;
+  }
+  
+  .about-content h3 {
+    font-size: 32px;
+  }
+  
+  .text-placeholder p {
+    font-size: 16px;
+  }
+  
+  .about-images {
+    height: 300px;
+    order: -1;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .about-content h2 {
+    font-size: 40px;
+  }
+  
+  .about-content h3 {
+    font-size: 28px;
+  }
+  
+  .about-images {
+    height: 250px;
+  }
+}
