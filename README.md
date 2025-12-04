@@ -2,6 +2,12 @@
 
 ![Little Lemon Logo](public/assets/Logo.svg)
 
+## 🌐 Live Website
+
+**Visit the Live Website**: [https://littlelemonweb.vercel.app/](https://littlelemonweb.vercel.app/)
+
+---
+
 ## 📋 Project Overview
 
 This is a comprehensive web application developed for Little Lemon Restaurant as part of the Meta Front-End Developer Capstone Project. The application provides an intuitive online table reservation system with a focus on exceptional user experience, accessibility, and responsive design.
