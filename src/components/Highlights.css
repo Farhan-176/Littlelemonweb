@@ -73,6 +73,7 @@
   height: 220px;
   object-fit: cover;
   border-radius: 16px 16px 0 0;
+  display: block;
 }
 
 .special-content {
@@ -147,6 +148,13 @@
   .highlights-header h2 {
     font-size: 36px;
   }
+
+  .special-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
 }
 
 /* Mobile */
@@ -183,7 +191,10 @@
 /* Small Mobile */
 @media (max-width: 480px) {
   .special-image {
-    height: 180px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
   }
   
   .special-content {

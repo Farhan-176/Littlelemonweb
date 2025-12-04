@@ -258,11 +258,13 @@ button {
   border-radius: 16px;
   padding: 1rem 2rem;
   font-size: 18px;
+  min-height: 44px;
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   background-color: var(--primary-yellow);
   color: var(--primary-green);
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
@@ -273,6 +275,7 @@ button:hover {
 
 button:active {
   transform: translateY(0);
+  background-color: var(--secondary-orange);
 }
 
 button:focus {
@@ -284,6 +287,14 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
+}
+
+/* Touch-friendly targets */
+@media (hover: none) and (pointer: coarse) {
+  button {
+    min-height: 48px;
+    padding: 1.1rem 2rem;
+  }
 }
 
 /* Form Elements */

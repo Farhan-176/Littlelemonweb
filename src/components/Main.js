@@ -13,6 +13,10 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import BookingPage from '../pages/BookingPage';
 import ConfirmedBooking from '../pages/ConfirmedBooking';
+import About from '../pages/About';
+import Menu from '../pages/Menu';
+import OrderOnline from '../pages/OrderOnline';
+import Login from '../pages/Login';
 
 /**
  * Initialize available times using the external API
@@ -103,6 +107,8 @@ function Main() {
     <main>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/menu" element={<Menu />} />
         <Route 
           path="/booking" 
           element={
@@ -123,6 +129,8 @@ function Main() {
             />
           } 
         />
+        <Route path="/order-online" element={<OrderOnline />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/confirmed" element={<ConfirmedBooking />} />
       </Routes>
     </main>

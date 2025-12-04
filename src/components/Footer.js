@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -6,18 +7,20 @@ function Footer() {
     <footer className="footer" role="contentinfo">
       <div className="footer-container">
         <div className="footer-section">
-          <img src="/assets/Logo.svg" alt="Little Lemon Logo" className="footer-logo" />
+          <Link to="/">
+            <img src="/assets/Logo.svg" alt="Little Lemon Logo" className="footer-logo" />
+          </Link>
         </div>
         
         <nav className="footer-section" aria-label="Footer Navigation">
           <h4>Doormat Navigation</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="/reservations">Reservations</a></li>
-            <li><a href="#order">Order Online</a></li>
-            <li><a href="#login">Login</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/menu">Menu</Link></li>
+            <li><Link to="/booking">Reservations</Link></li>
+            <li><Link to="/order-online">Order Online</Link></li>
+            <li><Link to="/login">Login</Link></li>
           </ul>
         </nav>
         
@@ -33,11 +36,14 @@ function Footer() {
         <nav className="footer-section" aria-label="Social Media">
           <h4>Social Media Links</h4>
           <ul>
-            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">Facebook</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram page">Instagram</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Twitter page">Twitter</a></li>
           </ul>
         </nav>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Little Lemon. All rights reserved.</p>
       </div>
     </footer>
   );

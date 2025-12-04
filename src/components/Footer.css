@@ -16,6 +16,8 @@
 .footer-logo {
   height: 80px;
   width: auto;
+  display: block;
+  max-width: 100%;
 }
 
 .footer-section h4 {
@@ -63,6 +65,20 @@ address ul li a:hover {
   color: #F4CE14;
 }
 
+.footer-bottom {
+  border-top: 1px solid rgba(244, 206, 20, 0.3);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
 @media (max-width: 1024px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -73,5 +89,10 @@ address ul li a:hover {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
   }
 }
